@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>数独</title>
+</head>
+<script type="text/javascript" src="./jquery.min.js"></script>
+<script type="text/javascript" src="./sudoku.js"></script>
+<script type="text/javascript">
+	
+
+</script>
+<style type="text/css">
+	td input{
+		width: 30px;
+		height: 30px;
+		text-align: center;
+	}
+	#get,#clear{
+		width: 100px;
+		height: 30px;
+	}
+	.btn{
+		margin:0 auto;
+		width: 300px;
+		height: 30px;
+		margin-top: 15px;
+		text-align: center;;
+	}
+	.msg{
+		width: 300px;
+		margin: 0 auto;
+	}
+</style>
+<body>
+	<div class="msg">请把数独题目的数字对应的填入下面的方格中,完成后点击显示答案即可,只显示一组答案</div>
+	<table align="center" border="0" cellpadding="0" cellspacing="0">
+		<tr id="line1">
+			<td><input class="number" id="number1" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number2" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number3" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number4" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number5" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number6" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number7" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number8" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number9" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+		</tr>
+		<tr id="line2">
+			<td><input class="number" id="number10" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number11" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number12" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number13" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number14" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number15" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number16" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number17" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number18" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+		</tr>
+		<tr id="line3">
+			<td><input class="number" id="number19" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number20" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number21" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number22" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number23" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number24" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number25" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number26" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number27" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+		</tr>
+		<tr id="line4">
+			<td><input class="number" id="number28" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number29" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number30" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number31" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number32" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number33" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number34" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number35" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number36" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+		</tr>
+		<tr id="line5">
+			<td><input class="number" id="number37" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number38" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number39" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number40" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number41" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number42" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number43" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number44" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number45" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+		</tr>
+		<tr id="line6">
+			<td><input class="number" id="number46" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number47" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number48" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number49" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number50" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number51" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number52" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number53" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number54" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+		</tr>
+		<tr id="line7">
+			<td><input class="number" id="number55" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number56" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number57" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number58" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number59" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number60" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number61" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number62" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number63" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+		</tr>
+		<tr id="line8">
+			<td><input class="number" id="number64" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number65" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number66" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number67" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number68" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number69" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number70" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number71" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number72" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+		</tr>
+		<tr id="line9">
+			<td><input class="number" id="number73" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number74" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number75" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number76" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number77" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number78" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number79" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number80" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+			<td><input class="number" id="number81" type="text" name="number" maxlength="1" onkeyup="check(this)"></td>
+		</tr>
+	</table>
+	<div class="btn"><input type="button" value="清空" id="clear"><input type="button" value="显示答案" id="get"></div>
+</body>
+</html>
